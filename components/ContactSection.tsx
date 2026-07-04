@@ -29,7 +29,7 @@ export function ContactSection() {
     setErrorMessage('');
 
     try {
-      const { error } = await supabase
+      const { error } = await (supabase as any)
         .withSchema('cosy_coffi_cwtch_corner_2d5838')
         .from('enquiries')
         .insert([
